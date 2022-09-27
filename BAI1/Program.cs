@@ -14,35 +14,32 @@ namespace BAI
         /// <param name="lijst">De lijst die wordt doorlopen
         /// (wordt in functie veranderd)</param>
         /// ------------------------------------------------------------
-        public static List<int> Opdr1FilterList(List<int> lijst)
+        public static void Opdr1FilterList(List<int> lijst)
         {
             // *** IMPLEMENTATION HERE *** //
             var dict = new Dictionary<int, int>();
 
-            List<int> list = new List<int>();
-            List<int> list2 = new List<int>();
-
             foreach (int i in lijst)
             {
 
-                if (dict.ContainsValue(i))
+                if (dict.ContainsKey(i))
                 {
-                    list.Add(i);
+                    dict[i]++;
                     
                 } else
                 {
 
-                    dict.Add(i, i);
+                    dict.Add(i, 1);
                 }
             }
-            foreach (int i in lijst)
+            for (int i = 0; i < lijst.Count; i++)
             {
-                if (list.Contains(i))
+                if (dict[lijst[i]] <= 1)
                 {
-                    list2.Add(i);
+                    lijst.RemoveAt(i);
+                    i--;
                 }
             }
-            return list2;
         }
 
 
@@ -107,6 +104,17 @@ namespace BAI
             Stack<int> stack = new Stack<int>();
 
             // *** IMPLEMENTATION HERE *** //
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            Random rand = new Random();
+            while (stack.Count < count)
+            {
+                int n = rand.Next(lower, upper + 1);
+                if (!dict.ContainsKey(n))
+                {
+                    stack.Push(n);
+                    dict.Add(n, n);
+                }
+            }
 
             return stack;
         }
@@ -138,7 +146,7 @@ namespace BAI
             Console.WriteLine("=== Opdracht 1 : FilterList ===");
             list = new List<int>() { 1, 3, 5, 7, 3, 8, 9, 5 };
             PrintEnumerable(list);
-            list = Opdr1FilterList(list);
+            Opdr1FilterList(list);
             PrintEnumerable(list);
 
             Console.WriteLine();

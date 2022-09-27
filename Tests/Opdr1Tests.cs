@@ -21,7 +21,7 @@ namespace BAI
             List<int> list = TestUtils.IntListFromString(input_str);
 
             // Act
-            list = BAI_Afteken1.Opdr1FilterList(list);
+            BAI_Afteken1.Opdr1FilterList(list);
 
             // Assert
             Assert.AreEqual(expected, TestUtils.EnumToString(list));
