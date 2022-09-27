@@ -20,19 +20,29 @@ namespace BAI
             var dict = new Dictionary<int, int>();
 
             List<int> list = new List<int>();
+            List<int> list2 = new List<int>();
 
             foreach (int i in lijst)
             {
+
                 if (dict.ContainsValue(i))
                 {
                     list.Add(i);
                     
                 } else
                 {
+
                     dict.Add(i, i);
                 }
             }
-            return list;
+            foreach (int i in lijst)
+            {
+                if (list.Contains(i))
+                {
+                    list2.Add(i);
+                }
+            }
+            return list2;
         }
 
 
@@ -48,6 +58,8 @@ namespace BAI
             Queue<int> q = new Queue<int>();
 
             // *** IMPLEMENTATION HERE *** //
+
+
 
             return q;
         }
