@@ -59,7 +59,10 @@ namespace BAI
 
             // *** IMPLEMENTATION HERE *** //
 
-
+            for (int i = 1; i < 51; i++)
+            {
+                q.Enqueue(i);
+            }
 
             return q;
         }
@@ -79,7 +82,14 @@ namespace BAI
             Stack<int> stack = new Stack<int>();
 
             // *** IMPLEMENTATION HERE *** //
-
+            while (queue.Count > 0)
+            {
+                int i = queue.Dequeue();
+                if (i % 4 == 0)
+                {
+                    stack.Push(i);
+                }
+            }
             return stack;
         }
 
