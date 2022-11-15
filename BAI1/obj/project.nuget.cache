@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NVXXpvUENkQ9IdKtDWuLhtxbgBJXfC92OmkJLqYog2XdAuXH/tDCduZyOy6n4+YEJXoyRrdznV8wDK/IoFyp9g==",
+  "dgSpecHash": "l8yl8/meuR0OkhdS5CAia44pD9+Sa21qdml0/yS2GhDwACDP+mhT+5PS0fsYwpFQim3dOpmXEoQAt6fimzcvTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Klaaspaashaas\\Documents\\Windespijn\\Uitgangssituatie\\BAI1\\BAI1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Klaaspaashaas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.29\\microsoft.netcore.app.host.win-x64.3.1.29.nupkg.sha512",
+    "C:\\Users\\Klaaspaashaas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Klaaspaashaas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Klaaspaashaas\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
